@@ -1,0 +1,19 @@
+﻿@model BusinessEntities.UserEntity
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="wrapper">
+    @using ((Html.BeginForm("Register", "Accout", FormMethod.Post, new { @class = "form-signin" })))
+    {
+        <h2 class="form-signin-heading">User Registration</h2>
+        @Html.TextBoxFor(x => x.FName, new { @class = "form-control", placeholder = "First Name", required = "", autofocus = "" })
+        @Html.TextBoxFor(x => x.LName, new { @class = "form-control", placeholder = "Last Name", required = "", autofocus = "" })
+        @Html.TextBoxFor(x => x.Username, new { @class = "form-control", placeholder = "Username / Email Address", required = "", autofocus = "" })
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Password", required = "", autofocus = "" })
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Confirm Password", required = "", autofocus = "" })
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    }
+</div>
