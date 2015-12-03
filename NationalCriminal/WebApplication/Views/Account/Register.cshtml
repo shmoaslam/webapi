@@ -1,0 +1,25 @@
+﻿@model BusinessEntities.UserEntity
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="wrapper">
+    @using ((Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-signin" })))
+    {
+        @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-error" })
+        <h2 class="form-signin-heading">User Registration</h2>
+        @Html.TextBoxFor(x => x.FName, new { @class = "form-control", placeholder = "First Name", autofocus = "" })
+        @Html.TextBoxFor(x => x.LName, new { @class = "form-control", placeholder = "Last Name",  autofocus = "" })
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Username / Email Address", autofocus = "" })
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Password", autofocus = "" })
+        @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password", autofocus = "" })
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    }
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

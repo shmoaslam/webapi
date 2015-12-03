@@ -1,0 +1,22 @@
+﻿
+@model BusinessEntities.LoginEntity
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="wrapper">
+    @using ((Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-signin" })))
+    {
+        @Html.ValidationSummary(false,string.Empty, new { @class = "alert alert-error" })
+        <h2 class="form-signin-heading">Login</h2>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Username / Email Address", autofocus = "" })
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Password", autofocus = "" })
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    }
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

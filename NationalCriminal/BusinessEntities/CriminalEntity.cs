@@ -25,7 +25,7 @@ namespace BusinessEntities
         public string Sex { get; set; }
 
         [StringLength(10)]
-        public string Height { get; set; }
+        public double? Height { get; set; }
 
         public double? Weight { get; set; }
 

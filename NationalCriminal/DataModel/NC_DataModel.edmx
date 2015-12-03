@@ -17,7 +17,7 @@ warning 6002: The table/view 'NC_DB.dbo.Criminal' does not have a primary key de
           <Property Name="LName" Type="varchar" MaxLength="50" />
           <Property Name="Age" Type="int" />
           <Property Name="Sex" Type="varchar" MaxLength="10" />
-          <Property Name="Height" Type="varchar" MaxLength="10" />
+          <Property Name="Height" Type="float" />
           <Property Name="Weight" Type="float" />
           <Property Name="Nationality" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -28,9 +28,8 @@ warning 6002: The table/view 'NC_DB.dbo.Criminal' does not have a primary key de
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="LName" Type="varchar" MaxLength="50" />
-          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="50" />
-          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="NC_DBModelStoreContainer">
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -59,9 +58,8 @@ warning 6002: The table/view 'NC_DB.dbo.Criminal' does not have a primary key de
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Criminal">
           <Key>
@@ -73,7 +71,7 @@ warning 6002: The table/view 'NC_DB.dbo.Criminal' does not have a primary key de
           <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Age" Type="Int32" />
           <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Height" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="Double" />
           <Property Name="Weight" Type="Double" />
           <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -93,7 +91,6 @@ warning 6002: The table/view 'NC_DB.dbo.Criminal' does not have a primary key de
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FName" ColumnName="FName" />
                 <ScalarProperty Name="LName" ColumnName="LName" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>

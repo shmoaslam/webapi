@@ -19,7 +19,7 @@ namespace DataModel
         public string LName { get; set; }
         public Nullable<int> Age { get; set; }
         public string Sex { get; set; }
-        public string Height { get; set; }
+        public Nullable<double> Height { get; set; }
         public Nullable<double> Weight { get; set; }
         public string Nationality { get; set; }
     }

@@ -52,38 +52,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Criminal.cs">
-      <DependentUpon>NCDataModel.tt</DependentUpon>
+      <DependentUpon>NC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NCDataModel.Context.cs">
+    <Compile Include="NC_DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NCDataModel.Context.tt</DependentUpon>
+      <DependentUpon>NC_DataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NCDataModel.cs">
+    <Compile Include="NC_DataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NCDataModel.tt</DependentUpon>
+      <DependentUpon>NC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NCDataModel.Designer.cs">
+    <Compile Include="NC_DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NCDataModel.edmx</DependentUpon>
+      <DependentUpon>NC_DataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="User.cs">
-      <DependentUpon>NCDataModel.tt</DependentUpon>
+      <DependentUpon>NC_DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkEntry\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="NCDataModel.edmx">
+    <EntityDeploy Include="NC_DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NCDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>NC_DataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="NCDataModel.edmx.diagram">
-      <DependentUpon>NCDataModel.edmx</DependentUpon>
+    <None Include="NC_DataModel.edmx.diagram">
+      <DependentUpon>NC_DataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -91,15 +91,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NCDataModel.Context.tt">
+    <Content Include="NC_DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NCDataModel.edmx</DependentUpon>
-      <LastGenOutput>NCDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>NC_DataModel.edmx</DependentUpon>
+      <LastGenOutput>NC_DataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="NCDataModel.tt">
+    <Content Include="NC_DataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NCDataModel.edmx</DependentUpon>
-      <LastGenOutput>NCDataModel.cs</LastGenOutput>
+      <DependentUpon>NC_DataModel.edmx</DependentUpon>
+      <LastGenOutput>NC_DataModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

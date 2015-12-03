@@ -10,21 +10,25 @@ namespace BusinessEntities
     {
         public long Id { get; set; }
 
-        [Required]
+        
+        [Required(ErrorMessage = "First Name is Required")]
         [StringLength(50)]
         public string FName { get; set; }
 
         [StringLength(50)]
         public string LName { get; set; }
 
-        [Required]
         [StringLength(50)]
-        public string Username { get; set; }
-
-        [StringLength(50)]
+        [Required(ErrorMessage = "Email cannot be left blank")]
+        [EmailAddress(ErrorMessage = "Please enter valid Email Address")]
         public string Email { get; set; }
 
-        [StringLength(50)]
+        [StringLength(10, ErrorMessage = "Password should be between 6 to 10 charactors", MinimumLength = 6)]
+        [Required(ErrorMessage = "Password cannot be left blank")]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "Confirm password cannot be left blank")]
+        [Compare("Password", ErrorMessage = "Confirm password and password do no match")]
+        public string ConfirmPassword { get; set; }
     }
 }
